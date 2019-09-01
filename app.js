@@ -7,14 +7,13 @@
 //
 const electron = require('electron');
 const { app, BrowserWindow, ipcMain, Menu } = require('electron'); // ipc nin ne olduguna bak
-const path = require('path');
-const url = require('url');
-//const { template } = require('application/js/menu')
+//const path = require('path');
+// const { menuTemplate } = require('./application/js/menu.js');
+// const menu = Menu.buildFromTemplate(menuTemplate);
 
 // # ==== Variables ====
 //
-var appDirectory = '/application/';
-var imgDirectory = '/application/resources/img';
+var iconPath = '/application/resources/img/mindsculpt.png';
 
 // # ==== Functions ====
 //
@@ -27,9 +26,9 @@ function createWindow()
         height: 728,
         minWidth: 180, // set a min width!
         minHeight: 120, // and a min height!
-        icon: path.join(__dirname, imgDirectory, 'mindsculpt.png'),
+        icon: __dirname + iconPath,
         backgroundColor: '#FFF',
-        frame: false, 
+        //frame: false, 
         //titleBarStyle: 'hidden',
         //transparent: true,
         webPreferences:{
@@ -37,31 +36,18 @@ function createWindow()
         }
     });
 
-    // and load the index.html of the app.
-    win.loadURL(url.format({
-        pathname: path.join(__dirname, appDirectory, 'html/index.html'),
-        protocol: 'file:',
-        slashes: true
-    }));
-
-    // var menu = Menu.buildFromTemplate([
-    //     {
-    //         label: 'Menu',
-    //         submenu: [
-    //             {label:'Adjust Notification Value'},
-    //             {label:'CoinMarketCap'},
-    //             {label:'Exit'}
-    //         ]
-    //     }
-    // ]);
-    // Menu.setApplicationMenu(menu); 
+    // Load index.html of the app
+    win.loadURL(`file://${__dirname}/application/html/index.html`);
 
     // Open the DevTools.
     //win.webContents.openDevTools({detached:true});
 }
 
 
-app.on('ready', createWindow);
+app.on('ready', () =>{
+    // Menu.setApplicationMenu(menu);
+    createWindow();
+});
 
 app.on('window-all-closed', () => {
     // controls if its a mac
