@@ -1,13 +1,13 @@
 // # ==== Precursor Directives ====
 //
 const electron = require('electron');
-const { app, BrowserWindow} = require('electron');
+const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
 
 // # ==== Variables ====
 //
-var imgDirectory = '/images/';
+var imgDirectory = '/application/resources/img';
 var appDirectory = '/application/';
 
 // # ==== Functions ====
@@ -17,10 +17,13 @@ function createWindow()
 {
     //define a variable for window
     let win = new  BrowserWindow({
-        width: 1000,
-        height: 600,
+        width: 1024,
+        height: 728,
+        minWidth: 180, // set a min width!
+        minHeight: 120, // and a min height!
         icon: path.join(__dirname, imgDirectory, 'mindsculpt.png'),
         frame: false, 
+        //titleBarStyle: 'hidden',
         //transparent: true,
         webPreferences:{
             nodeIntegration: true
@@ -33,6 +36,18 @@ function createWindow()
         protocol: 'file:',
         slashes: true
     }));
+
+    // var menu = Menu.buildFromTemplate([
+    //     {
+    //         label: 'Menu',
+    //         submenu: [
+    //             {label:'Adjust Notification Value'},
+    //             {label:'CoinMarketCap'},
+    //             {label:'Exit'}
+    //         ]
+    //     }
+    // ]);
+    // Menu.setApplicationMenu(menu); 
 
     // Open the DevTools.
     //win.webContents.openDevTools()
