@@ -20,7 +20,8 @@ function createWindow()
         width: 1000,
         height: 600,
         icon: path.join(__dirname, imgDirectory, 'mindsculpt.png'),
-        frame: false,
+        frame: false, 
+        //transparent: true,
         webPreferences:{
             nodeIntegration: true
         }

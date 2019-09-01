@@ -15,15 +15,13 @@
     -webkit-app-region: drag;
 }
 
-#container nav #titleShown{
-    width: 30%;
+#container nav #logo{
+    width: 20px;
     height: 100%;
-    line-height: 30px;
     color: #dfdfdf;
-    font-size: 1.2em;
-    font-weight: bold;
     float:left;
-    padding: 0 0 0 1em;
+    vertical-align:middle;
+    padding: 4px 4px 4px 4px;
 }
 
 #container nav #buttons{
@@ -31,7 +29,7 @@
     width: 120px;
     height: 100%;
     line-height: 30px;
-    background-color: #222222;
+    background-color: #1e1e1e;
     -webkit-app-region: no-drag;
 }
 
@@ -46,5 +44,5 @@
 }
 
 #buttons #minimize:hover, #buttons #maximize:hover, #buttons #close:hover{
-    background-color: #1e1e1e;
+    background-color: #222222;
 }
