@@ -1,3 +1,10 @@
+// # ==== Modules & Notes ====
+//
+// npm install --save-dev electron
+// npm install jquery --save
+// npm install custom-electron-titlebar@latest
+
+
 // # ==== Precursor Directives ====
 //
 const electron = require('electron');
