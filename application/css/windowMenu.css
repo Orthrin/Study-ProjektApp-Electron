@@ -28,21 +28,30 @@ body {
     padding: 3px 8px 5px 8px;
 }
 
-/* #titlebar #programTitle{
-    grid-column: 1;
-    display: flex;
+#titlebar #programTitle{
+    position: relative;
+    max-width: calc(80%);
+    min-width: 0px;
+    height: 100%;
+    display: inline-block;
+    /* float: left; */
+    justify-content: center;
     align-items: center;
+    text-align: center;
     font-family: "Segoe UI", sans-serif;
-    font-size: 11px;
+    font-size: 0.9em;
     overflow-x: hidden;
-    margin: 4px 8px 4px 8px;
+    white-space: nowrap;
+    margin: auto;
+    padding: 2px 0px 2px 0px;
 }
 
 #titlebar #programTitle span {
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
     line-height: 1.5;
-} */
+}
 
 #titlebar #windowControlContainer {
     width: 120px;
@@ -69,6 +78,7 @@ body {
     cursor: default;
     border: none;
     background-color: #1e1e1e;
+    font-family: Monospace;
 }
 
 #titlebar #windowControlContainer .windowControlButton #minimize {

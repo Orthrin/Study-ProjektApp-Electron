@@ -1,3 +1,8 @@
+// # ==== Libraries & Notes ====
+//
+// npm install --save-dev electron
+// npm install jquery --save
+
 // # ==== Precursor Directives ====
 //
 const electron = require('electron');
@@ -8,8 +13,8 @@ const url = require('url');
 
 // # ==== Variables ====
 //
-var imgDirectory = '/application/resources/img';
 var appDirectory = '/application/';
+var imgDirectory = '/application/resources/img';
 
 // # ==== Functions ====
 //
@@ -52,7 +57,7 @@ function createWindow()
     // Menu.setApplicationMenu(menu); 
 
     // Open the DevTools.
-    //win.webContents.openDevTools()
+    //win.webContents.openDevTools({detached:true});
 }
 
 

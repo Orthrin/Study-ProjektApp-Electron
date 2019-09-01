@@ -3,6 +3,7 @@ body, html{
     height: 100%;
     box-sizing: border-box;
     font-family: "Segoe UI", sans-serif;
+    font-size: 1em;
     background: #242424;
     color: #fdfdfd;
 }
@@ -11,9 +12,9 @@ body, html{
     margin: 0;
     padding: 0;
     border: 0; 
+    font-size: 1em;
     vertical-align: baseline;
     box-sizing: border-box;
-    font-family: monospace;
 }
 
 *, *:before, *:after {
