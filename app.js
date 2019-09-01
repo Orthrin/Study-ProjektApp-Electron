@@ -1,9 +1,10 @@
 // # ==== Precursor Directives ====
 //
 const electron = require('electron');
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain, Menu } = require('electron'); // ipc nin ne olduguna bak
 const path = require('path');
 const url = require('url');
+//const { template } = require('application/js/menu')
 
 // # ==== Variables ====
 //
@@ -22,6 +23,7 @@ function createWindow()
         minWidth: 180, // set a min width!
         minHeight: 120, // and a min height!
         icon: path.join(__dirname, imgDirectory, 'mindsculpt.png'),
+        backgroundColor: '#FFF',
         frame: false, 
         //titleBarStyle: 'hidden',
         //transparent: true,
@@ -32,7 +34,7 @@ function createWindow()
 
     // and load the index.html of the app.
     win.loadURL(url.format({
-        pathname: path.join(__dirname, appDirectory, 'index.html'),
+        pathname: path.join(__dirname, appDirectory, 'html/index.html'),
         protocol: 'file:',
         slashes: true
     }));

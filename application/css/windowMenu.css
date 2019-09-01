@@ -1,0 +1,92 @@
+body {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    overflow-y: hidden;
+    top: 0;
+    left: 0;
+}
+
+#titlebar {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 26px;
+    padding: 0;
+    background-color: #1e1e1e;
+    -webkit-app-region: drag;
+    /* background: #254053; */
+}
+
+#titlebar #programIcon {
+    width: calc(100%-8px);
+    height: 100%;
+    color: #dfdfdf;
+    float: left;
+    vertical-align: middle;
+    padding: 3px 8px 5px 8px;
+}
+
+/* #titlebar #programTitle{
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 11px;
+    overflow-x: hidden;
+    margin: 4px 8px 4px 8px;
+}
+
+#titlebar #programTitle span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+} */
+
+#titlebar #windowControlContainer {
+    width: 120px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    font-family: "Segoe MDL2 Assets";
+    float: right;
+    background-color: #1e1e1e;
+    -webkit-app-region: no-drag;
+}
+
+#titlebar #windowControlContainer .windowControlButton {
+    grid-row: 1 / span 1;
+    display: flex;
+    float: left;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #dfdfdf;
+    transition: all ease-in-out .2s;
+    cursor: default;
+    border: none;
+    background-color: #1e1e1e;
+}
+
+#titlebar #windowControlContainer .windowControlButton #minimize {
+    grid-column: 1;
+}
+
+#titlebar #windowControlContainer .windowControlButton #maximize
+/*,  .windowControlButton #restore-button*/
+
+    {
+    grid-column: 2;
+}
+
+#titlebar #windowControlContainer .windowControlButton #close {
+    grid-column: 3;
+}
+
+#titlebar #windowControlContainer .windowControlButton:hover, .windowControlButton:active {
+    border: none;
+    background-color: #363636;
+}

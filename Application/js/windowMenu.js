@@ -1,20 +1,45 @@
-const $ = require('jquery');
-const{ remote } = require('electron');
+const { remote, ipcRenderer } = require('electron');
+const currentWindow = remote.getCurrentWindow();
 
-var win = remote.getCurrentWindow();
+document.getElementById('minimize').addEventListener('click', () => {
+    currentWindow.minimize()
+})
 
-$('#minimize').click(function(){
-    win.minimize();
-});
-
-$('#maximize').click(function(){
-    if(!win.isMaximized()){
-        win.maximize();
-    }else{
-        win.unmaximize();
+document.getElementById('maximize').addEventListener('click', () => {
+    if(currentWindow.isMaximized())
+    {
+        currentWindow.unmaximize();
     }
-});
+    else
+    {
+        currentWindow.maximize();
+    }
+})
 
-$('#close').click(function(){
-    win.close();
-});
+document.getElementById('close').addEventListener('click', () => {
+    remote.app.quit()
+})
+
+
+
+
+// const $ = require('jquery');
+// const{ remote } = require('electron');
+
+// var win = remote.getCurrentWindow();
+
+// $('#minimize').click(function(){
+//     win.minimize();
+// });
+
+// $('#maximize').click(function(){
+//     if(!win.isMaximized()){
+//         win.maximize();
+//     }else{
+//         win.unmaximize();
+//     }
+// });
+
+// $('#close').click(function(){
+//     win.close();
+// });
