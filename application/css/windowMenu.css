@@ -30,20 +30,19 @@ body {
 
 #titlebar #programTitle{
     position: relative;
-    max-width: calc(80%);
-    min-width: 0px;
+    max-width: 100%;
     height: 100%;
-    display: inline-block;
-    /* float: left; */
+    display: flex;
+    float: right;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-family: "Segoe UI", sans-serif;
-    font-size: 0.9em;
+    font-size: 0.8em;
     overflow-x: hidden;
     white-space: nowrap;
-    margin: auto;
-    padding: 2px 0px 2px 0px;
+    padding: 0px 120px 4px 0px;
+    color: #363636;
 }
 
 #titlebar #programTitle span {
@@ -54,6 +53,9 @@ body {
 }
 
 #titlebar #windowControlContainer {
+    position:absolute;
+    top: 0;
+    right: 0;
     width: 120px;
     height: 100%;
     display: grid;

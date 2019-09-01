@@ -28,7 +28,7 @@ function createWindow()
         minHeight: 120, // and a min height!
         icon: __dirname + iconPath,
         backgroundColor: '#FFF',
-        //frame: false, 
+        frame: false, 
         //titleBarStyle: 'hidden',
         //transparent: true,
         webPreferences:{
@@ -40,7 +40,7 @@ function createWindow()
     win.loadURL(`file://${__dirname}/application/html/index.html`);
 
     // Open the DevTools.
-    //win.webContents.openDevTools({detached:true});
+    win.webContents.openDevTools({detached:true});
 }
 
 
