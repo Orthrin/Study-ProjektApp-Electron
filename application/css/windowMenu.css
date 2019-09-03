@@ -14,7 +14,7 @@ body {
     width: 100%;
     height: 26px;
     padding: 0;
-    background-color: #1e1e1e;
+    background-color: #242426;
     -webkit-app-region: drag;
     /* background: #254053; */
 }
@@ -42,7 +42,7 @@ body {
     overflow-x: hidden;
     white-space: nowrap;
     padding: 0px 120px 4px 0px;
-    color: #363636;
+    color: #626262;
 }
 
 #titlebar #programTitle span {
@@ -62,7 +62,6 @@ body {
     grid-template-columns: repeat(3, 40px);
     font-family: "Segoe MDL2 Assets";
     float: right;
-    background-color: #1e1e1e;
     -webkit-app-region: no-drag;
 }
 
@@ -79,7 +78,7 @@ body {
     transition: all ease-in-out .2s;
     cursor: default;
     border: none;
-    background-color: #1e1e1e;
+    background-color: #242426;
     font-family: Monospace;
 }
 
@@ -100,5 +99,5 @@ body {
 
 #titlebar #windowControlContainer .windowControlButton:hover, .windowControlButton:active {
     border: none;
-    background-color: #363636;
+    background-color: #565656;
 }

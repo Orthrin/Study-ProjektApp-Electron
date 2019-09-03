@@ -7,6 +7,11 @@
 //
 const electron = require('electron');
 const { app, BrowserWindow, ipcMain, Menu } = require('electron'); // ipc nin ne olduguna bak
+const defaultProps = {
+    width: 500,
+    height: 800,
+    show: false
+}
 //const path = require('path');
 // const { menuTemplate } = require('./application/js/menu.js');
 // const menu = Menu.buildFromTemplate(menuTemplate);
@@ -21,26 +26,25 @@ var iconPath = '/application/resources/img/mindsculpt.png';
 function createWindow()
 {
     //define a variable for window
-    let win = new  BrowserWindow({
+    let mainWindow = new  BrowserWindow({
         width: 1024,
-        height: 728,
+        height: 720,
         minWidth: 180, // set a min width!
         minHeight: 120, // and a min height!
         icon: __dirname + iconPath,
         backgroundColor: '#FFF',
         frame: false, 
-        //titleBarStyle: 'hidden',
-        //transparent: true,
+        titleBarStyle: 'hidden',
         webPreferences:{
             nodeIntegration: true
         }
     });
 
     // Load index.html of the app
-    win.loadURL(`file://${__dirname}/application/html/index.html`);
+    mainWindow.loadURL(`file://${__dirname}/application/html/index.html`);
 
     // Open the DevTools.
-    win.webContents.openDevTools({detached:true});
+    mainWindow.webContents.openDevTools({detached:true});
 }
 
 

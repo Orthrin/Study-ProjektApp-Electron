@@ -1,11 +1,65 @@
-#main {
+/* # ==== Color Palette ==== 
+242426 > main bluish black tone
+202225 > discord top blue
+1c252d > dark blue
+181d23 > darker blue
+1f1f1f > darkest
+313131 > gray
+fdfdfd > white
+1e1e1e > cool darkish
+363636 > hover
+bababa > project title
+*/
+
+main {
     position: absolute;
     height: calc(100% - 26px);
-    width:100%;
+    width: 100%;
     margin-top: 26px;
-    background-color: #242424;
+    /* background-color: #242424; */
     /* color: #fdfdfd; */
     overflow-y: auto;
-    padding: 20px;
+    padding: 0;
     /* padding:.4em .4em .4em .4em; */
-  }
+}
+
+.mainContainer {
+    box-sizing: border-box;
+    height: 100%;
+    float: left;   
+}
+
+#mainTool {
+    width: 46px;
+    /* margin-top: 6px; */
+    background: #242426;
+    vertical-align: middle;
+}
+
+#mainTool img {
+    vertical-align: middle;
+    margin: 6px 7px 0px 7px;
+}
+
+#mainOrganization {
+    width: 194px;
+    margin: 0;
+    padding: 0;
+}
+
+#searchBar{
+    background: #363636;  /*1e1e1e */
+    height: 32px;
+    vertical-align: middle;
+    line-height: 32px;  
+    padding-left: 6px;
+}
+
+#organization {
+    height: calc(100% - 32px);
+}
+
+#mainWorkspace {
+    width: calc(100% - 240px);
+    background: #1e1e1e;
+}
