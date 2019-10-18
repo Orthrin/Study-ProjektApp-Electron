@@ -29,6 +29,9 @@ let contextMenu = Menu.buildFromTemplate([
             { label: 'submenu1'},
             { label: 'submenu2'}
         ]
+    },
+    {
+        role: 'close'
     }
 ]);
 
