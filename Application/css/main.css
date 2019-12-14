@@ -32,13 +32,15 @@ main {
 #mainTool {
     width: 46px;
     /* margin-top: 6px; */
+    text-align: center;
+    margin: auto;
     background: #242426;
     vertical-align: middle;
 }
 
-#mainTool img {
-    vertical-align: middle;
-    margin: 6px 7px 0px 7px;
+#mainTool div:hover {
+    cursor: pointer;
+    background: #565656;
 }
 
 #mainOrganization {
