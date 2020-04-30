@@ -4,7 +4,7 @@
   "description": "external memory app",
   "main": "app.js",
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "status-check": "^0.0.17"
   },
   "devDependencies": {
